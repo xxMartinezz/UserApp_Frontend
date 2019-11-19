@@ -1,0 +1,26 @@
+<div class="container">
+
+    <!--<a routerLink="/users/new">Dodaj użytkownika</a>-->
+
+    <div *ngIf="users == undefined || users.length === 0">Brak użytkowników w bazie</div>
+      <table class="table table-hover" *ngIf="users != undefined && users.length > 0">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Imię</th>
+              <th scope="col">Nazwisko</th>
+              <th scope="col">Pesel</th>
+              <!--<th scope="col">Data urodzenia</th>-->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <th scope="row">{{user.id}}</th>
+              <td>{{user.name}}</td>
+              <td>{{user.surname}}</td>
+              <td>{{user.pesel}}</td>
+              <!--<td>{{user.dateOfBirth}}</td>-->
+            </tr>
+          </tbody>
+      </table>
+  </div>
