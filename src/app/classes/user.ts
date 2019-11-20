@@ -17,13 +17,13 @@ export class User
     name: string;
     surname: string;
     pesel: string;
-    //dateOfBirth
+    date: string;
 
-    constructor(name: string, surname: string, pesel: string)
+    constructor(name: string, surname: string, pesel: string, date: string)
     {
         this.name = name;
         this.surname = surname;
         this.pesel = pesel;
-        //dateOfBirth
+        this.date = date;
     }
 }

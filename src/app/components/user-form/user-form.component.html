@@ -1,1 +1,46 @@
-<p>user-form works!</p>
+<!--<div>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+      
+        <div>Imię:
+            <input type="text" [(ngModel)]="user.name" name="name" #name="ngModel" class="form-control" required minlength="2">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">Nieprawidłowe imię</div>      
+        </div>
+        
+        <div>Nazwisko:
+            <input type="text" [(ngModel)]="user.surname" name="surname" #surname="ngModel" required minlength="2">
+            <div *ngIf="surname.invalid && (surname.dirty || surname.touched)">Nieprawidłowe nazwisko</div>      
+        </div>
+
+        <div>Pesel:
+            <input type="text" [(ngModel)]="user.pesel" name="pesel" #pesel="ngModel" required length="11">
+            <div *ngIf="pesel.invalid && (pesel.dirty || pesel.touched)">Nieprawidłowe imię</div>      
+        </div>
+
+        <button type="submit" [disabled]="form.invalid && (form.dirty || form.touched)">Zapisz</button>
+      
+    </form>
+    
+</div>-->
+<form>
+
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+
+    <div class="form-group">
+        <label for="formGroupExampleInput">Imię</label>
+        <input type="text" [(ngModel)]="user.name" name="name" #name="ngModel" class="form-control" required minlength="2"placeholder="Imię">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">Nieprawidłowe imię</div>
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Nazwisko</label>
+        <input type="text" [(ngModel)]="user.surname" name="surname" #surname="ngModel" class="form-control" required minlength="2" placeholder="Nazwisko">
+        <div *ngIf="surname.invalid && (surname.dirty || surname.touched)" class="alert alert-danger">Nieprawidłowe nazwisko</div>
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Pesel</label>
+        <input type="text" [(ngModel)]="user.pesel" name="pesel" #pesel="ngModel" class="form-control" required minlength="11" maxlength="11" placeholder="Pesel">
+        <div *ngIf="pesel.invalid && (pesel.dirty || pesel.touched)" class="alert alert-danger">Nieprawidłowy pesel</div>
+    </div>
+
+    <button type="submit" [disabled]="form.invalid && (form.dirty || form.touched)">Zapisz</button>
+
+</form>
