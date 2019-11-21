@@ -1,27 +1,22 @@
-# ExenceFrontend
+#UserApp_Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
+Aplikacja umożliwiająca dodawanie użytkowników do bazy danych oraz
+pobieranie listy zapisanych użytkowników. Wykorzystane technologie:
 
-## Development server
+- Java 8
+- Spring Boot
+- Hibernate JPA
+- RestApi
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Aby uruchomić aplikację trzeba zainstalować JDK lub JRE w wersji minimum 1.8. Część backendowa znajduje się na porcie 8080.
+Sprawdzenie działania aplikacji może odbyć się na dwa sposoby.
+Pierwszym z nich jest uruchomienie części frontendowej projektu. 
+Należy zainstalować do tego celu Node.js w wersji 10.9.0 lub nowszej
+oraz Angular CLI (w moim przypadku Angular CLI: 8.3.3 oraz Node: 10.16.3).
+Część frontendową projektu uruchamiamy wchodząc do katalogu projektu oraz
+w wierszu poleceń wpisując polecenie ng serve --open.
+Część frontendowa znajduje się na porcie 4200.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Drugim sposobem jest wykorzystanie programu klienckiego REST 
+np. Insomnia czy Postman oraz obsłużenie podstawowych metod w programie
+(get oraz post).
