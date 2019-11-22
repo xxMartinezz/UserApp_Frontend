@@ -19,6 +19,6 @@ export class UserService {
 
   addUser(user: User): Observable<User>
   {
-    return this.httpClient.post<User>(`${this.restApiUrl}/users`, user);
+    return this.httpClient.post<User>(`${this.restApiUrl}/users/new`, user);
   }
 }
